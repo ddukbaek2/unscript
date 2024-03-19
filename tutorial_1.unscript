@@ -1,0 +1,33 @@
+// 변수와 함수의 구분이 없음
+// 객체 내의 변수와 함수 역시 마찬가지
+
+
+var programbase : class = {
+    var m_Count : int = 0;
+    __add__
+    __radd__
+    __subtract__
+    __rsubtract__
+    __equals__
+};
+
+var program : programbase = {
+    this.onCreate = (arguments : table) {
+        origin.onCreate(arguments);
+
+// 프리컴파일 사이에 있는 것은 최초 1회에 미리오브젝트 화 된다.
+// 클린 => 빌드 혹은 클린빌드를 하지 않으면 다시 만들지 않는다.
+#precompile
+    
+#end
+    };
+
+    once main : function = (arguments : table){
+        var console : runtime.import("filename.unscript") {
+            console.loggerTarget = this; // 
+        };
+        console.print("Hello World");
+    };
+};
+
+runtime.Execute(program.main)
